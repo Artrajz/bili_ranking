@@ -6,5 +6,5 @@ QAQ第一次上传git
 
 表格内容如下图：
 
-![image](https://github.com/pang-juzhong/bili_ranking/tree/master/readme.assets/image-20211026225815063.png)
+![image](https://github.com/pang-juzhong/bili_ranking/blob/c8f41db20a55097c93480987f43514c41dbfc327/readme.assets/image-20211026225815063.png)
 
