@@ -29,6 +29,7 @@ def getTime(select):
         return time.strftime("%Y.%m.%d %H:%M:%S", time.localtime())
     else:
         return time.strftime("%Y_%m_%d_%H_%M_%S", time.localtime())
+    
 def getData(url):
     datalist = []
     html = askUrl(url)
@@ -67,21 +68,19 @@ def getData(url):
 
 def askUrl(url):
     head = {
-        # "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-        # "Accept-Encoding": "gzip, deflate, br",
-        # "Accept-Language": "zh-CN,zh;q=0.9",
-        # "Cache-Control": "max-age=0",
-        # "Connection": "keep-alive",
-        # "Cookie": "LIVE_BUVID=AUTO7616141634535512; _uuid=04246967-129B-6F76-1A91-EE69108D331253842infoc; buvid3=172471DD-E77B-49CC-A9D6-2DD52B0FB0CA18546infoc; sid=asoxcr51; buvid_fp=172471DD-E77B-49CC-A9D6-2DD52B0FB0CA18546infoc; DedeUserID=13251505; DedeUserID__ckMd5=41cb4ff0a0df1c54; SESSDATA=cd2dbcd1%2C1629715528%2C3d32e*21; bili_jct=b47ee00b3f332e6f0be9d94422c9706e; bsource=search_baidu; CURRENT_FNVAL=80; blackside_state=1; rpdid=|(ku|J|YkYRk0J'uYkkJY|RkJ; bp_t_offset_13251505=530554660080301534; PVID=1; bp_video_offset_13251505=531209792922976972; fingerprint3=5f1cc142f58e5770207c4f1bb945c045; fingerprint=900cd9e21a26b9f8aa07323b9c87a733; fingerprint_s=26d0b0f4626f1baf1d3346c2531395f0; buvid_fp_plain=172471DD-E77B-49CC-A9D6-2DD52B0FB0CA18546infoc",
-        # "Host": "www.bilibili.com",
-        # "Referer": "https://www.bilibili.com/",
-        # "sec-ch-ua": '" Not;A Brand";v="99", "Google Chrome";v="91", "Chromium";v="91"',
-        # "sec-ch-ua-mobile": "?0",
-        # "Sec-Fetch-Dest": "document",
-        # "Sec-Fetch-Mode": "navigate",
-        # "Sec-Fetch-Site": "same-origin",
-        # "Sec-Fetch-User": "?1",
-        # "Upgrade-Insecure-Requests": "1",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+        "Accept-Language": "zh-CN,zh;q=0.9",
+        "Cache-Control": "max-age=0",
+        "Connection": "keep-alive",
+        "Host": "www.bilibili.com",
+        "Referer": "https://www.bilibili.com/",
+        "sec-ch-ua": '" Not;A Brand";v="99", "Google Chrome";v="91", "Chromium";v="91"',
+        "sec-ch-ua-mobile": "?0",
+        "Sec-Fetch-Dest": "document",
+        "Sec-Fetch-Mode": "navigate",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-User": "?1",
+        "Upgrade-Insecure-Requests": "1",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36"
     }
     request = urllib.request.Request(url, headers=head)
